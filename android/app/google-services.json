@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "626966883281",
+    "firebase_url": "https://taaanqyu.firebaseio.com",
+    "project_id": "taaanqyu",
+    "storage_bucket": "taaanqyu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626966883281:android:819f565ceb9767d0d10ef0",
+        "android_client_info": {
+          "package_name": "com.example.dimagkharab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626966883281-e69rffkhkhu0vma9ngmdu2l1ie3p3g2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDspkbvylIn888yA2N55pGNoJ5iw4ITk3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626966883281-e69rffkhkhu0vma9ngmdu2l1ie3p3g2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
