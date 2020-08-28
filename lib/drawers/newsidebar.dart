@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:dimagkharab/Company.dart';
-import 'package:dimagkharab/sidebar.dart';
 import 'package:dimagkharab/about.dart';
 import 'package:dimagkharab/samplepaper.dart';
 import 'package:dimagkharab/quiz.dart';
 import 'package:dimagkharab/tips.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import '../homepage.dart';
+import '../userscreen.dart';
 
 class Maindrawer extends StatelessWidget{
   @override
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   Widget build(BuildContext context) {
     // TODO: implement build
     return Drawer(
@@ -30,14 +34,14 @@ class Maindrawer extends StatelessWidget{
               padding: EdgeInsets.all(5.0),
               child: ListTile(
                 leading: Icon(Icons.person),
-                title: Text(" Profile ", style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),),
+                title: Text(" Update Profile ", style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),),
 
                 onTap: ()
-                {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: ((context) => drawer()),
-                  ));
-                },
+                  {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: ((context) => newuser()),
+                    ));
+                  }
               )
           ),
           Padding(
@@ -117,8 +121,11 @@ class Maindrawer extends StatelessWidget{
                 title: Text(" Log Out ", style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),),
 
                 onTap: ()
-                {
-
+                async {
+                  SharedPreferences prefs = await SharedPreferences.getInstance();
+                  prefs.remove('email');
+                  print("removed");
+                  signOut(context);
                 },
               )
           ),
@@ -141,5 +148,11 @@ class Maindrawer extends StatelessWidget{
       margin: EdgeInsets.only(top: 40.0, bottom: 10.0, left: 20.0, right: 20.0),
     );
   }
+  Future<void> signOut(BuildContext context) async {
+  await _firebaseAuth.signOut().then((_) {
+  Navigator.push(
+  context, MaterialPageRoute(builder: (context) => HomePage()));
+  });
+}
 
 }

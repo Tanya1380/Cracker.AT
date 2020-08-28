@@ -17,9 +17,9 @@ class samplepaper extends StatefulWidget{
     return Scaffold(
         backgroundColor: Color(0xFFEEEEEE),
       appBar: AppBar(
+        backgroundColor: Color(0xFF5C6BC0),
         title: Text(
-          " \t \t \t Sample Paper \t \t \t ",
-          style: TextStyle(fontFamily: 'Roboto', fontSize: 15.0, fontWeight: FontWeight.w700),
+          " Sample Paper ",
         ),
       ),
     );

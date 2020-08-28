@@ -1,4 +1,5 @@
 
+import 'package:dimagkharab/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -174,7 +175,10 @@ class _SignInState extends State<SignIn> {
         (email: email.text, password: password.text);
       //user.sendEmailVerification();
       //Navigator.of(context).pop();
-      Navigator.of(context).pushReplacementNamed('/homepage');
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => HomePage()));
       erro(context);
 
       return authResult.user != null;
