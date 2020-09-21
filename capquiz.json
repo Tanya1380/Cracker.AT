@@ -1,0 +1,71 @@
+[
+  {
+    "1": "What will be the output of the following C code?\n#include <stdio.h>\n    int main()\n    {\n        int i = 0;\n        int x = i++, y = ++i;\n        printf(\"%d % d\\n\", x, y);\n        return 0;\n    }",
+    "2": "What will be the output of the following C code?\n#include <stdio.h>\n    int main()\n    {\n        int i = 10;\n        int *p = &i;\n        printf(\"%d\\n\", *p++);\n    }",
+    "3": "What will be the output of the following C code?\n#include <stdio.h>\n    void main()\n    {\n        int x = 97;\n        int y = sizeof(x++);\n        printf(\"X is %d\", x);\n    }",
+    "4": "What will be the output of the following C code?\n\n    #include <stdio.h>\n    void main()\n    {\n        int x = 4, y, z;\n        y = --x;\n        z = x--;\n        printf(\"%d%d%d\", x,  y, z);\n    }",
+    "5": "What will be the output of the following C code?\n\n    #include <stdio.h>\n    void main()\n    {\n        int x = 4;\n        int *p = &x;\n        int *k = p++;\n        int r = p - k;\n        printf(\"%d\", r);\n    }",
+    "6": "What will be the output of the following C code?\n\n #include <stdio.h>\n    void main()\n    {\n      int a = 5, b = -7, c = 0, d;\n      d = ++a && ++b || ++c;\n      printf(\"\\n%d,%d,%d%,d\", a,  b, c, d);\n    }",
+    "7": "What will be the output of the following C code?\n\n    #include <stdio.h>\n    void main()\n    {\n        int a = -5;\n        int k = (a++, ++a);\n        printf(\"%d\\n\", k);\n    }"
+  },
+  {
+    "1":
+    {
+      "a": "0 2",
+      "b": "0 1",
+      "c": "1 2",
+      "d": "Undefined"
+    },
+    "2":
+    {
+    "a": "10",
+    "b": "11",
+    "c": "Garbage Value",
+    "d": "Address of i"
+  },
+    "3":
+    {
+    "a": "X is 97",
+    "b": "X is 98",
+    "c": "X is 99",
+    "d": "Run time error"
+  },
+    "4":
+    {
+    "a": "3 2 3",
+    "b": "2 3 3",
+    "c": "3 2 2",
+    "d": "2 3 4"
+  },
+    "5":
+    {
+      "a": "4",
+      "b": "8",
+      "c": "1",
+      "d": "Run time error"
+    },
+    "6":
+    {
+    "a": "6 , -6,  0,  0",
+    "b": "6,  -5,  0,  1",
+    "c": "6, -6, 0, 1",
+    "d": "-6, -6, 0, 1"
+  },
+    "7":
+    {
+    "a": "-4",
+    "b": "-5",
+    "c": "4",
+    "d": "-3"
+    }
+  },
+  {
+    "1": "0 2",
+    "2": "10",
+    "3": "X is 97",
+    "4": "2 3 3",
+    "5": "1",
+    "6": "-6, -6, 0, 1",
+    "7": "-3"
+  }
+  ]
